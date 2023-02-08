@@ -5,7 +5,7 @@ class Node:
     def interpret(self):
         raise Exception('Unimplemented method')
 
-    def grow(self, plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class Not(Node):
@@ -18,7 +18,7 @@ class Not(Node):
     def interpret(self, env):
         return not (self.left.interpret(env))
 
-    def grow(plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class And(Node):
@@ -32,7 +32,7 @@ class And(Node):
     def interpret(self, env):
         return self.left.interpret(env) and self.right.interpret(env)
 
-    def grow(plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class Lt(Node):
@@ -46,7 +46,7 @@ class Lt(Node):
     def interpret(self, env):
         return self.left.interpret(env) < self.right.interpret(env)
 
-    def grow(plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class Ite(Node):
@@ -64,7 +64,7 @@ class Ite(Node):
         else:
             return self.false_case.interpret(env)
 
-    def grow(plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class Num(Node):
@@ -98,7 +98,7 @@ class Plus(Node):
     def interpret(self, env):
         return self.left.interpret(env) + self.right.interpret(env)
 
-    def grow(plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class Times(Node):
@@ -112,11 +112,11 @@ class Times(Node):
     def interpret(self, env):
         return self.left.interpret(env) * self.right.interpret(env)
     
-    def grow(plist, new_plist):
+    def grow(self, plist, new_plist, size):
         pass
 
 class BottomUpSearch():
-
+    # Enumerative bottom-up search
     def grow(self, plist, operations):
         pass
 
@@ -124,7 +124,8 @@ class BottomUpSearch():
         num = list([Num(i) for i in integer_values])
         var = list([Var(i) for i in variables])
         p_list = num + var
-        
+        for i in range(bound):
+            p_list = self.grow(p_list, operations)        
 
 
 synthesizer = BottomUpSearch()

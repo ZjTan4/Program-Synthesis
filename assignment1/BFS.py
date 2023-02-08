@@ -121,7 +121,8 @@ class TopDownSearch():
         pass
 
     def synthesize(self, bound, operations, integer_values, variables, input_output):
-        pass
+        plist = list(operations)
+        
         
 
 
