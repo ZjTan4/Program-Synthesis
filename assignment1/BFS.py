@@ -125,7 +125,7 @@ class TopDownSearch():
         
 
 
-synthesizer = BottomUpSearch()
+synthesizer = TopDownSearch()
 # synthesizer.synthesize(10, [Lt, Ite], [1, 2], ['x', 'y'], [{'x':5, 'y': 10, 'out':5}, {'x':10, 'y': 5, 'out':5}, {'x':4, 'y': 3, 'out':3}])
 # synthesizer.synthesize(12, [And, Plus, Times, Lt, Ite, Not], [10], ['x', 'y'], [{'x':5, 'y': 10, 'out':5}, {'x':10, 'y': 5, 'out':5}, {'x':4, 'y': 3, 'out':4}, {'x':3, 'y': 4, 'out':4}])
 # synthesizer.synthesize(11, [And, Plus, Times, Lt, Ite, Not], [-1, 5], ['x', 'y'], [{'x':10, 'y':7, 'out':17},
