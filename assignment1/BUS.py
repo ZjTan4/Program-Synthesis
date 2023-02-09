@@ -1,3 +1,5 @@
+from itertools import product
+
 class Node:
     def toString(self):
         raise Exception('Unimplemented method')
@@ -5,8 +7,11 @@ class Node:
     def interpret(self):
         raise Exception('Unimplemented method')
 
-    def grow(self, plist, new_plist, size):
-        pass
+    def grow(plist, size):
+        raise Exception('Unimplemented method')
+
+    def size(self):
+        raise Exception('Unimplemented method')
 
 class Not(Node):
     def __init__(self, left):
@@ -18,8 +23,11 @@ class Not(Node):
     def interpret(self, env):
         return not (self.left.interpret(env))
 
-    def grow(self, plist, new_plist, size):
+    def grow(plist, size):
         pass
+
+    def size(self):
+        return self.left.size() + 1
 
 class And(Node):
     def __init__(self, left, right):
@@ -32,8 +40,11 @@ class And(Node):
     def interpret(self, env):
         return self.left.interpret(env) and self.right.interpret(env)
 
-    def grow(self, plist, new_plist, size):
+    def grow(plist, size):
         pass
+
+    def size(self):
+        return self.left.size() + self.right.size() + 1
 
 class Lt(Node):
     def __init__(self, left, right):
@@ -46,8 +57,15 @@ class Lt(Node):
     def interpret(self, env):
         return self.left.interpret(env) < self.right.interpret(env)
 
-    def grow(self, plist, new_plist, size):
-        pass
+    def grow(plist, size):
+        new_plist = []
+        for (p1, p2) in product(plist, plist):
+            if type(p1) in [Var, Num, Times, Plus] and type(p2) in [Var, Num, Times, Plus] and Lt(p1, p2).size() == size:
+                new_plist.append(Lt(p1, p2))
+        return new_plist
+    
+    def size(self):
+        return self.left.size() + self.right.size() + 1
 
 class Ite(Node):
     def __init__(self, condition, true_case, false_case):
@@ -64,8 +82,15 @@ class Ite(Node):
         else:
             return self.false_case.interpret(env)
 
-    def grow(self, plist, new_plist, size):
-        pass
+    def grow(plist, size):
+        new_plist = []
+        for (p1, p2, p3) in product(plist, plist, plist):
+            if type(p1) in [And, Not, Lt] and Ite(p1, p2, p3).size() == size:
+                new_plist.append(Ite(p1, p2, p3))
+        return new_plist
+
+    def size(self):
+        return self.condition.size() + self.true_case.size() + self.false_case.size() + 1
 
 class Num(Node):
     def __init__(self, value):
@@ -77,6 +102,9 @@ class Num(Node):
     def interpret(self, env):
         return self.value
 
+    def size(self):
+        return 1
+
 class Var(Node):
     def __init__(self, name):
         self.name = name
@@ -86,7 +114,10 @@ class Var(Node):
 
     def interpret(self, env):
         return env[self.name]
-
+    
+    def size(self):
+        return 1
+    
 class Plus(Node):
     def __init__(self, left, right):
         self.left = left
@@ -98,8 +129,15 @@ class Plus(Node):
     def interpret(self, env):
         return self.left.interpret(env) + self.right.interpret(env)
 
-    def grow(self, plist, new_plist, size):
-        pass
+    def grow(plist, size):
+        new_plist = []
+        for (p1, p2) in product(plist, plist):
+            if type(p1) in [Var, Num, Times, Plus] and type(p2) in [Var, Num, Times, Plus] and Plus(p1, p2).size() == size:
+                new_plist.append(Plus(p1, p2))
+        return new_plist
+
+    def size(self):
+        return self.left.size() + self.right.size() + 1
 
 class Times(Node):
     def __init__(self, left, right):
@@ -112,20 +150,56 @@ class Times(Node):
     def interpret(self, env):
         return self.left.interpret(env) * self.right.interpret(env)
     
-    def grow(self, plist, new_plist, size):
+    def grow(plist, size):
         pass
+
+    def size(self):
+        return self.left.size() + self.right.size() + 1
 
 class BottomUpSearch():
     # Enumerative bottom-up search
-    def grow(self, plist, operations):
-        pass
+    def grow(self, plist, operations, input_output, output, size):
+        new_plist = []
+        for operation in operations:
+            new_plist += operation.grow(plist, size)
+        for p in new_plist:
+            # if p has no observational equivalent programs, add to plist
+            observation_list = []
+            for case in input_output:
+                out = p.interpret(case)
+                observation = dict(case)
+                observation["out"] = out
+                observation_list.append(observation)
+            observation_list = str(observation_list)
+            if observation_list not in output:
+                plist.append(p)
+                output.add(observation_list)
+        return plist
+
+    
+    def evaluate(self, program, input_output):
+        for case in input_output:
+            if case["out"] != program.interpret(case):
+                return False
+        return True
 
     def synthesize(self, bound, operations, integer_values, variables, input_output):
         num = list([Num(i) for i in integer_values])
         var = list([Var(i) for i in variables])
-        p_list = num + var
-        for i in range(bound):
-            p_list = self.grow(p_list, operations)        
+        plist = num + var
+        evals = 0
+        output = set()
+        for i in range(1, bound):
+            plist = self.grow(plist, operations, input_output, output, i)
+            for j in range(evals, len(plist)):
+                evals += 1
+                # if satisfies, return
+                if self.evaluate(plist[j], input_output):
+                    print("Successfully found a program: {}".format(plist[j].toString()))
+                    return plist[j]
+
+        print("Failed to find a satisfying program")
+        return None
 
 
 synthesizer = BottomUpSearch()
