@@ -8,13 +8,14 @@ def report(synthesizer):
         # of evaluated programs
         '''
         start_time = time.time()
-        program = synthesizer(*args, **kwargs)
+        result = synthesizer(*args, **kwargs)
         runtime = time.time() - start_time
-        if program is None:
+        print("----------------------------------------------------")        
+        if result is None:
             print("Failed to find a satisfying program")
         else:
-            print("Successfully found a satisfying program in {}: \n{}".format(runtime, program))
-        
+            program, generated, evaluated = result
+            print("Successfully found a satisfying program: \n{}\nRuntime: {} Seconds\nNumber of Generated Programs: {}\nNumber of Evaluated Programs: {}".format(program.toString(), runtime, generated, evaluated))
     return inner
 
 class Node:
@@ -282,26 +283,35 @@ class TopDownSearch():
             return program.children(dsl)
 
     def evaluate(self, program, input_output):
+        self.evaluated += 1
+
         for case in input_output:
             if case["out"] != program.interpret(case):
                 return False
         return True
 
     @report
-    def synthesize(self, bound, operations, integer_values, variables, input_output):
+    def synthesize(self, bound, operations, integer_values, variables, input_output):        
         dsl =  list([Num(integer_value) for integer_value in integer_values]) + \
             list([Var(variable) for variable in variables]) + \
             list([operation() for operation in operations])
         plist = list(dsl)
+
+        self.generated = len(plist)
+        self.evaluated = 0
+
         while len(plist) > 0 and plist[0].size() <= bound:
         # all(map(lambda x: x.size() < bound, plist)):
             p = plist.pop(0)
             children = self.children(p, dsl)
             for p_prime in children:
                 if p_prime.complete() and self.evaluate(p_prime, input_output):
-                    return p_prime
+                    return p_prime, self.generated, self.evaluated
                 if not p_prime.complete():
                     plist.append(p_prime)
+                
+                self.generated += 1 # because the generation is lazy
+        
         return None      
         
 print("Top-Down Search")

@@ -9,13 +9,15 @@ def report(synthesizer):
         # of evaluated programs
         '''
         start_time = time.time()
-        program = synthesizer(*args, **kwargs)
+        result = synthesizer(*args, **kwargs)
         runtime = time.time() - start_time
-        if program is None:
+        print("----------------------------------------------------")        
+        if result is None:
             print("Failed to find a satisfying program")
         else:
-            print("Successfully found a satisfying program in {}: \n{}".format(runtime, program))
-        
+            program, generated, evaluated, generated_equiv, evaluated_equiv = result
+            print("Successfully found a satisfying program: \n{}\nRuntime: {} Seconds\nNumber of Generated Programs: {}\nNumber of Evaluated Programs: {}".format(program.toString(), runtime, generated, evaluated))
+            print("Considering the trimming: \nNumber of Generated Programs: {}\nNumber of Evaluated Programs: {}".format(generated_equiv, evaluated_equiv))
     return inner
 
 class Node:
@@ -195,6 +197,10 @@ class BottomUpSearch():
         for p in new_plist:
             # if p has no observational equivalent programs, add to plist
             observation_list = []
+            
+            self.generated += 1
+            self.evaluated += 1
+            
             for case in input_output:
                 out = p.interpret(case)
                 observation = dict(case)
@@ -205,7 +211,6 @@ class BottomUpSearch():
                 plist.append(p)
                 output.add(observation_list)
         return plist
-
     
     def evaluate(self, program, input_output):
         for case in input_output:
@@ -213,10 +218,15 @@ class BottomUpSearch():
                 return False
         return True
 
+    @report
     def synthesize(self, bound, operations, integer_values, variables, input_output):
         num = list([Num(i) for i in integer_values])
         var = list([Var(i) for i in variables])
         plist = num + var
+        
+        self.generated = len(plist)
+        self.evaluated = 0
+        
         evals = 0
         output = set()
         for i in range(1, bound + 1):
@@ -224,7 +234,7 @@ class BottomUpSearch():
             for j in range(evals, len(plist)):
                 # if satisfies, return
                 if self.evaluate(plist[j], input_output):
-                    return plist[j]
+                    return plist[j], len(plist), j + 1, self.generated, self.evaluated
                 evals += 1
 
         return None
