@@ -1,4 +1,22 @@
 from itertools import product
+import time
+
+def report(synthesizer):
+    def inner(*args, **kwargs):
+        '''
+        Running time
+        # of generated programs
+        # of evaluated programs
+        '''
+        start_time = time.time()
+        program = synthesizer(*args, **kwargs)
+        runtime = time.time() - start_time
+        if program is None:
+            print("Failed to find a satisfying program")
+        else:
+            print("Successfully found a satisfying program in {}: \n{}".format(runtime, program))
+        
+    return inner
 
 class Node:
     def toString(self):
@@ -82,7 +100,7 @@ class Ite(Node):
         self.false_case = false_case
 
     def toString(self):
-        return "(if" + self.condition.toString() + " then " + self.true_case.toString() + " else " + self.false_case.toString() + ")"
+        return "(if " + self.condition.toString() + " then " + self.true_case.toString() + " else " + self.false_case.toString() + ")"
 
     def interpret(self, env):
         if self.condition.interpret(env):
@@ -205,16 +223,13 @@ class BottomUpSearch():
             plist = self.grow(plist, operations, input_output, output, i)
             for j in range(evals, len(plist)):
                 # if satisfies, return
-                # print("{} : {}".format(j, plist[j].toString()))
                 if self.evaluate(plist[j], input_output):
-                    print("Successfully found a program: {}".format(plist[j].toString()))
                     return plist[j]
                 evals += 1
 
-        print("Failed to find a satisfying program")
         return None
 
-
+print("Bottom-Up Search")
 synthesizer = BottomUpSearch()
 # synthesizer.synthesize(10, [Lt, Ite], [1, 2], ['x', 'y'], [{'x':5, 'y': 10, 'out':5}, {'x':10, 'y': 5, 'out':5}, {'x':4, 'y': 3, 'out':3}])
 # synthesizer.synthesize(12, [And, Plus, Times, Lt, Ite, Not], [10], ['x', 'y'], [{'x':5, 'y': 10, 'out':5}, {'x':10, 'y': 5, 'out':5}, {'x':4, 'y': 3, 'out':4}, {'x':3, 'y': 4, 'out':4}])
