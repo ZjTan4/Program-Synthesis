@@ -24,7 +24,11 @@ class Not(Node):
         return not (self.left.interpret(env))
 
     def grow(plist, size):
-        pass
+        new_plist = []
+        for p in plist:
+            if type(p) == Lt and Not(p).size() == size:
+                new_plist.append(Not(p))
+        return new_plist
 
     def size(self):
         return self.left.size() + 1
@@ -41,7 +45,11 @@ class And(Node):
         return self.left.interpret(env) and self.right.interpret(env)
 
     def grow(plist, size):
-        pass
+        new_plist = []
+        for (p1, p2) in product(plist, plist):
+            if type(p1) == Lt and type(p2) == Lt and And(p1, p2).size() == size:
+                new_plist.append(And(p1, p2))
+        return new_plist
 
     def size(self):
         return self.left.size() + self.right.size() + 1
@@ -151,7 +159,11 @@ class Times(Node):
         return self.left.interpret(env) * self.right.interpret(env)
     
     def grow(plist, size):
-        pass
+        new_plist = []
+        for (p1, p2) in product(plist, plist):
+            if type(p1) in [Var, Num, Times, Plus] and type(p2) in [Var, Num, Times, Plus] and Times(p1, p2).size() == size:
+                new_plist.append(Times(p1, p2))
+        return new_plist
 
     def size(self):
         return self.left.size() + self.right.size() + 1
@@ -189,14 +201,15 @@ class BottomUpSearch():
         plist = num + var
         evals = 0
         output = set()
-        for i in range(1, bound):
+        for i in range(1, bound + 1):
             plist = self.grow(plist, operations, input_output, output, i)
             for j in range(evals, len(plist)):
-                evals += 1
                 # if satisfies, return
+                # print("{} : {}".format(j, plist[j].toString()))
                 if self.evaluate(plist[j], input_output):
                     print("Successfully found a program: {}".format(plist[j].toString()))
                     return plist[j]
+                evals += 1
 
         print("Failed to find a satisfying program")
         return None
