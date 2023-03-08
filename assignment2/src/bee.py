@@ -383,6 +383,7 @@ class BeeSearch:
             string_variables_list, integer_variables_list, input_output)
         self._outputs = set()
         self.number_evaluations = 0
+        self.number_heapify_calls = 0
 
     def is_correct(self, p):
         is_program_correct = True
@@ -458,8 +459,9 @@ class BeeSearch:
     def search(self, bound, string_literals_list, integer_literals_list,
                boolean_literals, string_variables_list,
                integer_variables_list):
-        # Implement here the search method for Bee Search
-        pass
+        
+        # no program found
+        return None, self.number_evaluations, self.number_heapify_calls
 
     def synthesize(self, bound, operations, string_literals_list, integer_literals_list,
                    boolean_literals, string_variables_list,
