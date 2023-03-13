@@ -457,9 +457,42 @@ class BeeSearch:
 
         self.number_heapify_calls += self.plist.process_batch_jobs()
 
+    def transform_terminals(self, terminals, type):
+        if (len(terminals) == 0):
+            return []
+        new_terminals = []
+
+        if (type == 'strvar'):
+            for terminal in terminals:
+                new_terminals.append(StrVar(terminal))
+        elif (type == 'strlit'):
+            for terminal in terminals:
+                new_terminals.append(StrLiteral(terminal))
+        elif (type == 'intvar'):
+            for terminal in terminals:
+                new_terminals.append(IntVar(terminal))
+        elif (type == 'intlit'):
+            for terminal in terminals:
+                new_terminals.append(IntLiteral(terminal))
+        elif (type == 'boollit'):
+            for terminal in terminals:
+                val = True if terminal else False
+                new_terminals.append(BoolLiteral(val))
+
+        return new_terminals
+
     def search(self, bound, string_literals_list, integer_literals_list,
                boolean_literals, string_variables_list,
                integer_variables_list):
+        
+        str_literals = self.transform_terminals(string_literals_list, 'strlit')
+        bool_literals = self.transform_terminals(boolean_literals, 'boollit')
+        int_literals = self.transform_terminals(integer_literals_list, 'intlit')
+        str_var = self.transform_terminals(string_variables_list, 'strvar')
+        int_var = self.transform_terminals(integer_variables_list, 'intvar')
+
+        terminals = str_literals + str_var + int_literals + int_var + bool_literals
+
         cost = 1
         current_step = 0
         while current_step <= bound:
@@ -471,12 +504,22 @@ class BeeSearch:
                    boolean_literals, string_variables_list,
                    integer_variables_list):
 
-        BustlePCFG.initialize(operations, string_literals_list, integer_literals_list, boolean_literals,
+        BustlePCFG.initialize(operations, 
+                              string_literals_list, 
+                              integer_literals_list, 
+                              boolean_literals,
                               string_variables_list,
-                              integer_variables_list)
+                              integer_variables_list
+                            )
 
-        program_solution, evaluations, reheapifies = self.search(bound, string_literals_list, integer_literals_list,
-                                                                 boolean_literals, string_variables_list, integer_variables_list)
+        program_solution, evaluations, reheapifies = self.search(
+                                                            bound, 
+                                                            string_literals_list, 
+                                                            integer_literals_list,
+                                                            boolean_literals, 
+                                                            string_variables_list, 
+                                                            integer_variables_list
+                                                        )
 
         return program_solution, evaluations, reheapifies
 

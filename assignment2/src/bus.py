@@ -268,8 +268,12 @@ if __name__ == "__main__":
     begin_time = datetime.now()
 
     # passing bound as 1000
-    solution, num = synthesizer.synthesize(1000, dsl_functions, string_variables, string_literals,
-                                           integer_variables, integer_literals, input_output_examples)
+    solution, num = synthesizer.synthesize(1000, dsl_functions, 
+                                           string_variables, 
+                                           string_literals,
+                                           integer_variables, 
+                                           integer_literals, 
+                                           input_output_examples)
 
     time_taken = str(datetime.now() - begin_time)
 
