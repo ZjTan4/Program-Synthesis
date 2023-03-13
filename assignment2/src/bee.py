@@ -7,6 +7,7 @@ import bisect
 import math
 
 import numpy as np
+import tensorflow as tf
 import tensorflow.keras.models as keras_model
 from scipy.interpolate import CubicSpline
 
@@ -459,7 +460,10 @@ class BeeSearch:
     def search(self, bound, string_literals_list, integer_literals_list,
                boolean_literals, string_variables_list,
                integer_variables_list):
-        
+        cost = 1
+        current_step = 0
+        while current_step <= bound:
+            pass
         # no program found
         return None, self.number_evaluations, self.number_heapify_calls
 
@@ -478,6 +482,9 @@ class BeeSearch:
 
 
 def load_bustle_model():
+    physical_devices = tf.config.list_physical_devices('GPU')
+    tf.config.set_visible_devices([physical_devices[8]], 'GPU')
+
     global BustleModel
     # can be changed to load different models
     model_filename = models_directory + "bustle_model_01.hdf5"
@@ -550,7 +557,8 @@ if __name__ == "__main__":
 
     specification_parser = StrParser(benchmark)
     specifications = specification_parser.parse()
-    logging.info("\n")
+    # logging.info("\n")
+
     # Sygus grammar.
     dsl_functions = [StrConcat, StrReplace, StrSubstr, StrIte, StrIntToStr, StrCharAt, StrLower, StrUpper, IntStrToInt,
                      IntPlus, IntMinus, IntLength, IntIteInt, IntIndexOf, IntFirstIndexOf, IntMultiply, IntModulo,

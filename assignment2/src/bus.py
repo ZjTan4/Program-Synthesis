@@ -247,7 +247,7 @@ if __name__ == "__main__":
 
     specification_parser = StrParser(benchmark)
     specifications = specification_parser.parse()
-    logging.info("\n")
+    # logging.info("\n")
 
     if (not accumulate_all):
         string_variables = specifications[0]

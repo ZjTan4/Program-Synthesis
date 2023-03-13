@@ -2,10 +2,10 @@ import re
 from property_signatures import *
 
 # paths relative to the main.py file.
-PATH_TO_STR_BENCHMARKS = "../sygus_string_tasks/"
-config_directory = "../config/"
-models_directory = "../models/"
-logs_directory = "../logs/"
+PATH_TO_STR_BENCHMARKS = "./sygus_string_tasks/"
+config_directory = "./config/"
+models_directory = "./models/"
+logs_directory = "./logs/"
 
 # sygus parser constants
 NT_STRING = "ntString String"
