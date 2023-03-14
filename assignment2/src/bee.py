@@ -545,7 +545,8 @@ def load_bustle_model():
 
 
 if __name__ == "__main__":
-
+    load_bustle_model()
+    
     TaskId = None
     log_filename = logs_directory + "/bee-search.log"
     os.makedirs(os.path.dirname(log_filename), exist_ok=True)
@@ -573,8 +574,6 @@ if __name__ == "__main__":
                         str(TaskId) + "] " + '%(message)s',
                         datefmt='%H:%M:%S',
                         level=logging.DEBUG)
-
-    load_bustle_model()
 
     with open(config_directory+"sygus_string_benchmarks.txt") as f:
         benchmarks = f.read().splitlines()
