@@ -490,6 +490,7 @@ class BeeSearch:
         bool_literals = self.transform_terminals(boolean_literals, 'boollit')
         str_var = self.transform_terminals(string_variables_list, 'strvar')
         int_var = self.transform_terminals(integer_variables_list, 'intvar')
+        
         # Init DSL terminals
         terminals = str_literals + str_var + int_literals + int_var + bool_literals
         # Init plist
@@ -546,7 +547,7 @@ def load_bustle_model():
 
 if __name__ == "__main__":
     load_bustle_model()
-    
+
     TaskId = None
     log_filename = logs_directory + "/bee-search.log"
     os.makedirs(os.path.dirname(log_filename), exist_ok=True)
@@ -632,7 +633,7 @@ if __name__ == "__main__":
         string_variables, integer_variables, input_output_examples)
 
     begin_time = datetime.now()
-    solution, num, reheapifies = synthesizer.synthesize(float('inf'), dsl_functions,
+    solution, num, reheapifies = synthesizer.synthesize(1000, dsl_functions,
                                                         string_literals,
                                                         integer_literals,
                                                         [True, False],
