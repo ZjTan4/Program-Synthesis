@@ -136,7 +136,7 @@ class ProgramList:
 
             # Predict the probability of the current batch.
             current_batch_predictions = BustleModel.predict(
-                np.array(current_batch_ps))
+                np.array(current_batch_ps), verbose = 0)
 
             for program_index, program in enumerate(current_batch):
 
@@ -388,7 +388,6 @@ class BeeSearch:
 
     def is_correct(self, p):
         is_program_correct = True
-
         for inout in self._input_output:
             env = self.init_env(inout)
             out = p.interpret(env)
@@ -457,55 +456,24 @@ class BeeSearch:
 
         self.number_heapify_calls += self.plist.process_batch_jobs()
 
-    def transform_terminals(self, terminals, type):
-        if (len(terminals) == 0):
-            return []
-        new_terminals = []
-
-        if (type == 'strvar'):
-            for terminal in terminals:
-                new_terminals.append(StrVar(terminal))
-        elif (type == 'strlit'):
-            for terminal in terminals:
-                new_terminals.append(StrLiteral(terminal))
-        elif (type == 'intvar'):
-            for terminal in terminals:
-                new_terminals.append(IntVar(terminal))
-        elif (type == 'intlit'):
-            for terminal in terminals:
-                new_terminals.append(IntLiteral(terminal))
-        elif (type == 'boollit'):
-            for terminal in terminals:
-                val = True if terminal else False
-                new_terminals.append(BoolLiteral(val))
-
-        return new_terminals
-
     def search(self, bound, string_literals_list, integer_literals_list,
                boolean_literals, string_variables_list,
                integer_variables_list):
         # Init DSL
-        str_literals = self.transform_terminals(string_literals_list, 'strlit')
-        int_literals = self.transform_terminals(integer_literals_list, 'intlit')
-        bool_literals = self.transform_terminals(boolean_literals, 'boollit')
-        str_var = self.transform_terminals(string_variables_list, 'strvar')
-        int_var = self.transform_terminals(integer_variables_list, 'intvar')
-        
-        # Init DSL terminals
-        terminals = str_literals + str_var + int_literals + int_var + bool_literals
-        # Init plist
-        self.plist.plist[1] = {}
-        for terminal in terminals:
-            if self.is_correct(terminal):
-                return terminal, self.number_evaluations, self.number_heapify_calls
-            if not self.has_equivalent(terminal):
-                if terminal.getReturnType() not in self.plist.plist[1]:
-                    self.plist.plist[1][terminal.getReturnType()] = []
-                self.plist.plist[1][terminal.getReturnType()].append(terminal)
+        self.plist.init_plist(string_literals_list, 
+                              integer_literals_list, 
+                              boolean_literals,
+                              string_variables_list, 
+                              integer_variables_list, 
+                            )
         # start searching
-        cost = 1
         current_step = 0
         while current_step <= bound:
+            combination, cost = self.plist.get_next_cheapest()
+            for p in self.grow(combination, cost):
+                if self.is_correct(p):
+                    return p, self.number_evaluations, self.number_heapify_calls
+            self.plist.generate_next_set_of_combinations()
             current_step += 1
         # no program found
         return None, self.number_evaluations, self.number_heapify_calls
@@ -535,9 +503,6 @@ class BeeSearch:
 
 
 def load_bustle_model():
-    physical_devices = tf.config.list_physical_devices('GPU')
-    tf.config.set_visible_devices([physical_devices[8]], 'GPU')
-
     global BustleModel
     # can be changed to load different models
     model_filename = models_directory + "bustle_model_01.hdf5"

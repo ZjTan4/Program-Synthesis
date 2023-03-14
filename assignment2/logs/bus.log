@@ -1,0 +1,63 @@
+[Task: 1] Benchmark: 11604909.sl
+[Task: 1] Result: Success
+[Task: 1] Program: _arg_0.Substr((-1 + _arg_0.IndexOf(".")),concat(-1.IntToStr(), _arg_0).IndexOf("."))
+[Task: 1] Number of evaluations: 31720514
+[Task: 1] 2023-03-14 00:38:10.945787
+[Task: 1] Time taken: 1:21:19.717359
+[Task: 1] 
+
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("BRD", "Branding").replace("DRS", "Direct Response").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 31704931
+[Task: 8] 2023-03-14 05:38:17.578995
+[Task: 8] Time taken: 0:04:49.318544
+[Task: 8] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((1 + _arg_1.IndexOf("_")),"".StrToInt())
+[Task: 56] Number of evaluations: 296149
+[Task: 56] 2023-03-14 05:38:25.415521
+[Task: 56] Time taken: 0:00:02.991067
+[Task: 56] 
+
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr((-1 + (-1 + -1)),"".StrToInt()).replace(".", "")
+[Task: 57] Number of evaluations: 3334792
+[Task: 57] 2023-03-14 05:39:04.095950
+[Task: 57] Time taken: 0:00:38.610489
+[Task: 57] 
+
+
+[Task: 100] Benchmark: name-combine-4_short.sl
+[Task: 100] Result: Success
+[Task: 100] Program: concat(lastname, concat(",", concat(" ", concat(firstname.CharAt(0), "."))))
+[Task: 100] Number of evaluations: 4905628
+[Task: 100] 2023-03-14 05:40:23.814837
+[Task: 100] Time taken: 0:01:19.293285
+[Task: 100] 
+
+
+[Task: 132] Benchmark: phone-6-short.sl
+[Task: 132] Result: Success
+[Task: 132] Program: name.Substr((1 + name.IndexOf(" ")),name.IndexOf("-"))
+[Task: 132] Number of evaluations: 3098069
+[Task: 132] 2023-03-14 05:41:22.434974
+[Task: 132] Time taken: 0:00:57.933695
+[Task: 132] 
+
+
+[Task: 172] Benchmark: stackoverflow4.sl
+[Task: 172] Result: Success
+[Task: 172] Program: _arg_0.replace("<", " ").replace(">", "").replace(",", " ").replace(",", " ")
+[Task: 172] Number of evaluations: 175340573
+[Task: 172] 2023-03-14 06:17:12.933149
+[Task: 172] Time taken: 0:35:49.691964
+[Task: 172] 
+
+

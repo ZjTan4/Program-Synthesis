@@ -1,0 +1,90 @@
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 22180
+[Task: 56] 2023-03-14 06:48:47.605237
+[Task: 56] Time taken: 0:00:15.484474
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 22180
+[Task: 56] 2023-03-14 06:50:09.697269
+[Task: 56] Time taken: 0:00:12.350246
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 1475
+[Task: 56] 2023-03-14 06:51:18.736145
+[Task: 56] Time taken: 0:00:12.401283
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-14 06:53:25.479549
+[Task: 56] Time taken: 0:00:12.407816
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-14 06:55:08.508010
+[Task: 56] Time taken: 0:00:12.327416
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-14 06:57:41.297280
+[Task: 56] Time taken: 0:00:12.314188
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-14 06:59:05.900230
+[Task: 56] Time taken: 0:00:14.035133
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("DRS", "Direct Response").replace("BRD", "Branding").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 47994
+[Task: 8] 2023-03-14 07:00:28.500081
+[Task: 8] Time taken: 0:00:30.247733
+[Task: 8] Number of calls to heapify: 0
+[Task: 8] 
+
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr((_arg_0.IndexOf(".") * -1),_arg_0.Length()).replace(".", "")
+[Task: 57] Number of evaluations: 29437
+[Task: 57] 2023-03-14 07:02:47.065038
+[Task: 57] Time taken: 0:00:25.758668
+[Task: 57] Number of calls to heapify: 1029
+[Task: 57] 
+
+
