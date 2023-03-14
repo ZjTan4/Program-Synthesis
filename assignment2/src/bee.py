@@ -486,12 +486,16 @@ class BeeSearch:
                integer_variables_list):
         
         str_literals = self.transform_terminals(string_literals_list, 'strlit')
-        bool_literals = self.transform_terminals(boolean_literals, 'boollit')
         int_literals = self.transform_terminals(integer_literals_list, 'intlit')
+        bool_literals = self.transform_terminals(boolean_literals, 'boollit')
         str_var = self.transform_terminals(string_variables_list, 'strvar')
         int_var = self.transform_terminals(integer_variables_list, 'intvar')
 
         terminals = str_literals + str_var + int_literals + int_var + bool_literals
+
+        self.plist.plist[1] = {}
+        for terminal in terminals:
+            pass
 
         cost = 1
         current_step = 0
