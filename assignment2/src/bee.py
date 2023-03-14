@@ -484,23 +484,28 @@ class BeeSearch:
     def search(self, bound, string_literals_list, integer_literals_list,
                boolean_literals, string_variables_list,
                integer_variables_list):
-        
+        # Init DSL
         str_literals = self.transform_terminals(string_literals_list, 'strlit')
         int_literals = self.transform_terminals(integer_literals_list, 'intlit')
         bool_literals = self.transform_terminals(boolean_literals, 'boollit')
         str_var = self.transform_terminals(string_variables_list, 'strvar')
         int_var = self.transform_terminals(integer_variables_list, 'intvar')
-
+        # Init DSL terminals
         terminals = str_literals + str_var + int_literals + int_var + bool_literals
-
+        # Init plist
         self.plist.plist[1] = {}
         for terminal in terminals:
-            pass
-
+            if self.is_correct(terminal):
+                return terminal, self.number_evaluations, self.number_heapify_calls
+            if not self.has_equivalent(terminal):
+                if terminal.getReturnType() not in self.plist.plist[1]:
+                    self.plist.plist[1][terminal.getReturnType()] = []
+                self.plist.plist[1][terminal.getReturnType()].append(terminal)
+        # start searching
         cost = 1
         current_step = 0
         while current_step <= bound:
-            pass
+            current_step += 1
         # no program found
         return None, self.number_evaluations, self.number_heapify_calls
 
