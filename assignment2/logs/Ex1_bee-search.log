@@ -1,0 +1,70 @@
+[Task: 1] Benchmark: 11604909.sl
+[Task: 1] Result: Success
+[Task: 1] Program: _arg_0.Substr((_arg_0.IndexOf(".") + -1),((1 + 1) + _arg_0.IndexOf(".")))
+[Task: 1] Number of evaluations: 223632
+[Task: 1] 2023-03-15 11:00:55.068951
+[Task: 1] Time taken: 0:00:57.370708
+[Task: 1] Number of calls to heapify: 0
+[Task: 1] 
+
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("DRS", "Direct Response").replace("BRD", "Branding").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 47994
+[Task: 8] 2023-03-15 11:01:30.305674
+[Task: 8] Time taken: 0:00:19.734482
+[Task: 8] Number of calls to heapify: 0
+[Task: 8] 
+
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-15 11:01:51.806220
+[Task: 56] Time taken: 0:00:09.213265
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr((_arg_0.IndexOf(".") * -1),_arg_0.Length()).replace(".", "")
+[Task: 57] Number of evaluations: 29437
+[Task: 57] 2023-03-15 11:02:20.188653
+[Task: 57] Time taken: 0:00:16.391028
+[Task: 57] Number of calls to heapify: 1029
+[Task: 57] 
+
+
+[Task: 100] Benchmark: name-combine-4_short.sl
+[Task: 100] Result: Success
+[Task: 100] Program: concat(lastname, concat(",", concat(" ", concat(firstname.CharAt(0), "."))))
+[Task: 100] Number of evaluations: 8128
+[Task: 100] 2023-03-15 11:02:40.031083
+[Task: 100] Time taken: 0:00:07.481188
+[Task: 100] Number of calls to heapify: 0
+[Task: 100] 
+
+
+[Task: 132] Benchmark: phone-6-short.sl
+[Task: 132] Result: Success
+[Task: 132] Program: name.Substr((name.IndexOf("-") - 3),name.IndexOf("-"))
+[Task: 132] Number of evaluations: 160192
+[Task: 132] 2023-03-15 11:03:22.084028
+[Task: 132] Time taken: 0:00:29.837840
+[Task: 132] Number of calls to heapify: 0
+[Task: 132] 
+
+
+[Task: 172] Benchmark: stackoverflow4.sl
+[Task: 172] Result: Fail
+[Task: 172] Program: None
+[Task: 172] Number of evaluations: 253458
+[Task: 172] 2023-03-15 11:04:24.233776
+[Task: 172] Time taken: 0:00:50.102050
+[Task: 172] Number of calls to heapify: 0
+[Task: 172] 
+
+
