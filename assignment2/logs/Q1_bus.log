@@ -6,7 +6,6 @@
 [Task: 1] Time taken: 1:21:19.717359
 [Task: 1] 
 
-
 [Task: 8] Benchmark: 25239569.sl
 [Task: 8] Result: Success
 [Task: 8] Program: _arg_0.replace("BRD", "Branding").replace("DRS", "Direct Response").replace("LDS", "Leads")
@@ -14,7 +13,6 @@
 [Task: 8] 2023-03-14 05:38:17.578995
 [Task: 8] Time taken: 0:04:49.318544
 [Task: 8] 
-
 
 [Task: 56] Benchmark: exceljet1.sl
 [Task: 56] Result: Success
@@ -24,7 +22,6 @@
 [Task: 56] Time taken: 0:00:02.991067
 [Task: 56] 
 
-
 [Task: 57] Benchmark: exceljet2.sl
 [Task: 57] Result: Success
 [Task: 57] Program: _arg_0.Substr((-1 + (-1 + -1)),"".StrToInt()).replace(".", "")
@@ -32,7 +29,6 @@
 [Task: 57] 2023-03-14 05:39:04.095950
 [Task: 57] Time taken: 0:00:38.610489
 [Task: 57] 
-
 
 [Task: 100] Benchmark: name-combine-4_short.sl
 [Task: 100] Result: Success
@@ -42,7 +38,6 @@
 [Task: 100] Time taken: 0:01:19.293285
 [Task: 100] 
 
-
 [Task: 132] Benchmark: phone-6-short.sl
 [Task: 132] Result: Success
 [Task: 132] Program: name.Substr((1 + name.IndexOf(" ")),name.IndexOf("-"))
@@ -50,7 +45,6 @@
 [Task: 132] 2023-03-14 05:41:22.434974
 [Task: 132] Time taken: 0:00:57.933695
 [Task: 132] 
-
 
 [Task: 172] Benchmark: stackoverflow4.sl
 [Task: 172] Result: Success

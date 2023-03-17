@@ -26,7 +26,7 @@ regex_alpha_only = re.compile('^[a-zA-Z]+$')
 
 # Util functions for beesearch
 def decimal_place_converter(number):
-    return float("{:.2f}".format(number))
+    return float("{:.0f}".format(number))
 
 
 def populate_property_value(property_signature, property_encoding):

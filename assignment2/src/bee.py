@@ -598,7 +598,7 @@ if __name__ == "__main__":
         string_variables, integer_variables, input_output_examples)
 
     begin_time = datetime.now()
-    solution, num, reheapifies = synthesizer.synthesize(1000, dsl_functions,
+    solution, num, reheapifies = synthesizer.synthesize(float("inf"), dsl_functions,
                                                         string_literals,
                                                         integer_literals,
                                                         [True, False],
@@ -622,4 +622,4 @@ if __name__ == "__main__":
         logging.info("Time taken: " + str(datetime.now() - begin_time))
         logging.info("Number of calls to heapify: " + str(reheapifies))
 
-    logging.info("\n\n")
+    logging.info("\n")

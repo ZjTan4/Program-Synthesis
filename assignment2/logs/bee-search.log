@@ -1,0 +1,256 @@
+1
+[Task: 1] Benchmark: 11604909.sl
+[Task: 1] Result: Success
+[Task: 1] Program: _arg_0.Substr((_arg_0.IndexOf(".") + -1),((1 + 1) + _arg_0.IndexOf(".")))
+[Task: 1] Number of evaluations: 227155
+[Task: 1] 2023-03-17 09:40:05.837628
+[Task: 1] Time taken: 0:00:18.737453
+[Task: 1] Number of calls to heapify: 0
+[Task: 1] 
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("BRD", "Branding").replace("DRS", "Direct Response").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 48286
+[Task: 8] 2023-03-17 09:40:29.060788
+[Task: 8] Time taken: 0:00:06.901327
+[Task: 8] Number of calls to heapify: 0
+[Task: 8] 
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 19856
+[Task: 56] 2023-03-17 09:40:45.255438
+[Task: 56] Time taken: 0:00:03.738789
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr((_arg_0.IndexOf(".") * -1),_arg_0.Length()).replace(".", "")
+[Task: 57] Number of evaluations: 30729
+[Task: 57] 2023-03-17 09:41:04.905681
+[Task: 57] Time taken: 0:00:06.543026
+[Task: 57] Number of calls to heapify: 164
+[Task: 57] 
+
+[Task: 100] Benchmark: name-combine-4_short.sl
+[Task: 100] Result: Success
+[Task: 100] Program: concat(concat(concat(lastname, concat(",", " ")), firstname.CharAt(0)), ".")
+[Task: 100] Number of evaluations: 8056
+[Task: 100] 2023-03-17 09:41:22.175616
+[Task: 100] Time taken: 0:00:04.332142
+[Task: 100] Number of calls to heapify: 0
+[Task: 100] 
+
+[Task: 132] Benchmark: phone-6-short.sl
+[Task: 132] Result: Success
+[Task: 132] Program: name.Substr((name.IndexOf("-") - 3),name.IndexOf("-"))
+[Task: 132] Number of evaluations: 153669
+[Task: 132] 2023-03-17 09:41:45.587122
+[Task: 132] Time taken: 0:00:10.482317
+[Task: 132] Number of calls to heapify: 0
+[Task: 132] 
+
+[Task: 172] Benchmark: stackoverflow4.sl
+[Task: 172] Result: Success
+[Task: 172] Program: _arg_0.replace(">", "").replace("<", " ").replace(",", " ").replace(",", " ")
+[Task: 172] Number of evaluations: 307690
+[Task: 172] 2023-03-17 09:42:18.609397
+[Task: 172] Time taken: 0:00:20.169208
+[Task: 172] Number of calls to heapify: 0
+[Task: 172] 
+
+3
+[Task: 1] Benchmark: 11604909.sl
+[Task: 1] Result: Success
+[Task: 1] Program: _arg_0.Substr((_arg_0.IndexOf(".") + -1),((1 + 1) + _arg_0.IndexOf(".")))
+[Task: 1] Number of evaluations: 223317
+[Task: 1] 2023-03-17 09:45:29.171664
+[Task: 1] Time taken: 0:02:46.472510
+[Task: 1] Number of calls to heapify: 0
+[Task: 1] 
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("DRS", "Direct Response").replace("BRD", "Branding").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 48159
+[Task: 8] 2023-03-17 09:46:10.280754
+[Task: 8] Time taken: 0:00:28.171640
+[Task: 8] Number of calls to heapify: 0
+[Task: 8] 
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-17 09:46:47.500375
+[Task: 56] Time taken: 0:00:24.277754
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr((-1 - (1 + 1)),_arg_0.Length()).replace(".", "")
+[Task: 57] Number of evaluations: 29424
+[Task: 57] 2023-03-17 09:47:37.877000
+[Task: 57] Time taken: 0:00:37.979309
+[Task: 57] Number of calls to heapify: 8614
+[Task: 57] 
+
+[Task: 100] Benchmark: name-combine-4_short.sl
+[Task: 100] Result: Success
+[Task: 100] Program: concat(lastname, concat(",", concat(" ", concat(firstname.CharAt(0), "."))))
+[Task: 100] Number of evaluations: 8188
+[Task: 100] 2023-03-17 09:47:59.306529
+[Task: 100] Time taken: 0:00:08.458589
+[Task: 100] Number of calls to heapify: 0
+[Task: 100] 
+
+[Task: 132] Benchmark: phone-6-short.sl
+[Task: 132] Result: Success
+[Task: 132] Program: name.Substr((name.IndexOf("-") - 3),name.IndexOf("-"))
+[Task: 132] Number of evaluations: 160193
+[Task: 132] 2023-03-17 09:49:37.880757
+[Task: 132] Time taken: 0:01:25.774603
+[Task: 132] Number of calls to heapify: 0
+[Task: 132] 
+
+[Task: 172] Benchmark: stackoverflow4.sl
+[Task: 172] Result: Success
+[Task: 172] Program: _arg_0.replace(">", "").replace("<", " ").replace(",", " ").replace(",", " ")
+[Task: 172] Number of evaluations: 298325
+[Task: 172] 2023-03-17 09:51:28.162540
+[Task: 172] Time taken: 0:01:37.122065
+[Task: 172] Number of calls to heapify: 0
+[Task: 172] 
+
+4
+[Task: 1] Benchmark: 11604909.sl
+[Task: 1] Result: Success
+[Task: 1] Program: _arg_0.Substr((_arg_0.IndexOf(".") + -1),((1 + 1) + _arg_0.IndexOf(".")))
+[Task: 1] Number of evaluations: 223328
+[Task: 1] 2023-03-17 10:02:17.977489
+[Task: 1] Time taken: 0:04:55.458453
+[Task: 1] Number of calls to heapify: 0
+[Task: 1] 
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("DRS", "Direct Response").replace("BRD", "Branding").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 48027
+[Task: 8] 2023-03-17 10:03:01.499772
+[Task: 8] Time taken: 0:00:30.143998
+[Task: 8] Number of calls to heapify: 0
+[Task: 8] 
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 20705
+[Task: 56] 2023-03-17 10:03:48.755035
+[Task: 56] Time taken: 0:00:34.378451
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr((-1 - (1 + 1)),_arg_0.Length()).replace(".", "")
+[Task: 57] Number of evaluations: 29409
+[Task: 57] 2023-03-17 10:04:52.824564
+[Task: 57] Time taken: 0:00:51.224442
+[Task: 57] Number of calls to heapify: 14201
+[Task: 57] 
+
+[Task: 100] Benchmark: name-combine-4_short.sl
+[Task: 100] Result: Success
+[Task: 100] Program: concat(lastname, concat(",", concat(" ", concat(firstname.CharAt(0), "."))))
+[Task: 100] Number of evaluations: 8185
+[Task: 100] 2023-03-17 10:05:13.760703
+[Task: 100] Time taken: 0:00:08.331703
+[Task: 100] Number of calls to heapify: 0
+[Task: 100] 
+
+[Task: 132] Benchmark: phone-6-short.sl
+[Task: 132] Result: Success
+[Task: 132] Program: name.Substr((name.IndexOf("-") - 3),name.IndexOf("-"))
+[Task: 132] Number of evaluations: 160193
+[Task: 132] 2023-03-17 10:07:26.709655
+[Task: 132] Time taken: 0:02:00.723222
+[Task: 132] Number of calls to heapify: 0
+[Task: 132] 
+
+[Task: 172] Benchmark: stackoverflow4.sl
+[Task: 172] Result: Success
+[Task: 172] Program: _arg_0.replace(">", "").replace("<", " ").replace(",", " ").replace(",", " ")
+[Task: 172] Number of evaluations: 298325
+[Task: 172] 2023-03-17 10:09:26.314034
+[Task: 172] Time taken: 0:01:46.648916
+[Task: 172] Number of calls to heapify: 0
+[Task: 172] 
+
+0
+[Task: 1] Benchmark: 11604909.sl
+[Task: 1] Result: Success
+[Task: 1] Program: _arg_0.Substr((_arg_0.IndexOf(".") + -1),((_arg_0.IndexOf(".") + 1) + 1))
+[Task: 1] Number of evaluations: 335270
+[Task: 1] 2023-03-17 10:10:52.183598
+[Task: 1] Time taken: 0:00:12.865400
+[Task: 1] Number of calls to heapify: 0
+[Task: 1] 
+
+[Task: 8] Benchmark: 25239569.sl
+[Task: 8] Result: Success
+[Task: 8] Program: _arg_0.replace("BRD", "Branding").replace("DRS", "Direct Response").replace("LDS", "Leads")
+[Task: 8] Number of evaluations: 49883
+[Task: 8] 2023-03-17 10:11:08.522613
+[Task: 8] Time taken: 0:00:03.547912
+[Task: 8] Number of calls to heapify: 0
+[Task: 8] 
+
+[Task: 56] Benchmark: exceljet1.sl
+[Task: 56] Result: Success
+[Task: 56] Program: _arg_1.Substr((_arg_1.IndexOf("_") + 1),_arg_1.Length())
+[Task: 56] Number of evaluations: 21801
+[Task: 56] 2023-03-17 10:11:22.291792
+[Task: 56] Time taken: 0:00:01.741066
+[Task: 56] Number of calls to heapify: 0
+[Task: 56] 
+
+[Task: 57] Benchmark: exceljet2.sl
+[Task: 57] Result: Success
+[Task: 57] Program: _arg_0.Substr(((-1 + -1) + -1),_arg_0.Length()).replace(".", "")
+[Task: 57] Number of evaluations: 38586
+[Task: 57] 2023-03-17 10:11:36.907791
+[Task: 57] Time taken: 0:00:02.578084
+[Task: 57] Number of calls to heapify: 0
+[Task: 57] 
+
+[Task: 100] Benchmark: name-combine-4_short.sl
+[Task: 100] Result: Success
+[Task: 100] Program: concat(concat(concat(lastname, concat(",", " ")), firstname.CharAt(0)), ".")
+[Task: 100] Number of evaluations: 6958
+[Task: 100] 2023-03-17 10:11:51.460712
+[Task: 100] Time taken: 0:00:01.900172
+[Task: 100] Number of calls to heapify: 0
+[Task: 100] 
+
+[Task: 132] Benchmark: phone-6-short.sl
+[Task: 132] Result: Success
+[Task: 132] Program: name.Substr((name.IndexOf(" ") + 1),name.IndexOf("-"))
+[Task: 132] Number of evaluations: 427972
+[Task: 132] 2023-03-17 10:12:16.386754
+[Task: 132] Time taken: 0:00:12.429499
+[Task: 132] Number of calls to heapify: 0
+[Task: 132] 
+
+[Task: 172] Benchmark: stackoverflow4.sl
+[Task: 172] Result: Success
+[Task: 172] Program: _arg_0.replace(">", "").replace("<", " ").replace(",", " ").replace(",", " ")
+[Task: 172] Number of evaluations: 316467
+[Task: 172] 2023-03-17 10:12:39.887155
+[Task: 172] Time taken: 0:00:11.322682
+[Task: 172] Number of calls to heapify: 0
+[Task: 172] 
+
