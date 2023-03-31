@@ -78,8 +78,23 @@ class LatentSearch:
             rewards.append(mean_reward)
         return programs, torch.tensor(rewards, device=self.device)
     
-    def search(self) -> tuple[str, float, bool]:
-        pass
+    def search(self) -> tuple[str, float]:
+        population = self.init_population()
+        for _ in range(self.number_iterations):
+            programs, rewards = self.execute_population(population)
+            topk = torch.topk(rewards, self.n_elite)
+            elite = torch.stack([
+                population[topk.indices[i]] for i in range(self.n_elite)
+            ])
+            mean_elite = elite.mean(dim=0)
+            population = []
+            for _ in range(self.population_size):
+                individual = mean_elite + self.sigma * torch.randn(self.model_hidden_size, device=self.device)
+                population.append(individual)
+            population = torch.Tensor(population, device=self.device)
+        return 
+
+
 
     def save_gifs(self, program):
         """
