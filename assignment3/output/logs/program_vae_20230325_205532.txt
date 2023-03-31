@@ -1,0 +1,612 @@
+2023-03-25 20:55:32,300: [Main] Starting Latent Search with model LeapsVAE for task StairClimber
+2023-03-25 20:55:33,312: [Latent Search] Iteration 1.
+2023-03-25 20:55:33,312: [Latent Search] Mean elite reward: 0.017500000074505806
+2023-03-25 20:55:33,312: [Latent Search] Best reward: 0.4375
+2023-03-25 20:55:33,312: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move i) ELSE e( turnLeft e) move WHILE c( frontIsClear c) w( turnRight move w) m)
+2023-03-25 20:55:34,180: [Latent Search] Iteration 2.
+2023-03-25 20:55:34,180: [Latent Search] Mean elite reward: 0.05000000074505806
+2023-03-25 20:55:34,180: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:34,180: [Latent Search] Best program: DEF run m( move turnLeft move putMarker turnRight move m)
+2023-03-25 20:55:35,023: [Latent Search] Iteration 3.
+2023-03-25 20:55:35,023: [Latent Search] Mean elite reward: 0.24250000715255737
+2023-03-25 20:55:35,023: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:35,023: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move i) ELSE e( turnLeft e) move turnRight WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:55:35,870: [Latent Search] Iteration 4.
+2023-03-25 20:55:35,870: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:35,870: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:35,870: [Latent Search] Best program: DEF run m( WHILE c( frontIsClear c) w( move putMarker w) turnLeft move turnRight move m)
+2023-03-25 20:55:36,757: [Latent Search] Iteration 5.
+2023-03-25 20:55:36,757: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:36,757: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:36,757: [Latent Search] Best program: DEF run m( IFELSE c( rightIsClear c) i( move i) ELSE e( turnLeft e) move turnRight WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:55:37,546: [Latent Search] Iteration 6.
+2023-03-25 20:55:37,546: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:37,546: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:37,546: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move i) ELSE e( turnLeft e) move turnRight WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:55:38,302: [Latent Search] Iteration 7.
+2023-03-25 20:55:38,302: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:38,302: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:38,302: [Latent Search] Best program: DEF run m( move turnLeft move turnRight putMarker move m)
+2023-03-25 20:55:38,966: [Latent Search] Iteration 8.
+2023-03-25 20:55:38,966: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:38,966: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:38,966: [Latent Search] Best program: DEF run m( turnLeft IFELSE c( rightIsClear c) i( move i) ELSE e( move e) turnRight move WHILE c( frontIsClear c) w( turnRight move w) m)
+2023-03-25 20:55:39,655: [Latent Search] Iteration 9.
+2023-03-25 20:55:39,656: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:39,656: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:39,656: [Latent Search] Best program: DEF run m( turnLeft IFELSE c( rightIsClear c) i( move i) ELSE e( move e) putMarker turnRight WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:55:40,372: [Latent Search] Iteration 10.
+2023-03-25 20:55:40,372: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:40,372: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:40,372: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:55:41,131: [Latent Search] Iteration 11.
+2023-03-25 20:55:41,131: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:41,131: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:41,131: [Latent Search] Best program: DEF run m( move move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:55:41,856: [Latent Search] Iteration 12.
+2023-03-25 20:55:41,856: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:41,856: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:41,856: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move putMarker m)
+2023-03-25 20:55:42,787: [Latent Search] Iteration 13.
+2023-03-25 20:55:42,787: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:42,787: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:42,787: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move putMarker m)
+2023-03-25 20:55:43,690: [Latent Search] Iteration 14.
+2023-03-25 20:55:43,690: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:43,690: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:43,690: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:55:44,479: [Latent Search] Iteration 15.
+2023-03-25 20:55:44,479: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:44,479: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:44,479: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move putMarker m)
+2023-03-25 20:55:45,137: [Latent Search] Iteration 16.
+2023-03-25 20:55:45,137: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:45,137: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:45,137: [Latent Search] Best program: DEF run m( move turnLeft putMarker move turnRight move pickMarker m)
+2023-03-25 20:55:45,830: [Latent Search] Iteration 17.
+2023-03-25 20:55:45,830: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:45,830: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:45,830: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:55:46,592: [Latent Search] Iteration 18.
+2023-03-25 20:55:46,592: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:46,592: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:46,592: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:55:47,340: [Latent Search] Iteration 19.
+2023-03-25 20:55:47,340: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:47,340: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:47,340: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move putMarker m)
+2023-03-25 20:55:48,075: [Latent Search] Iteration 20.
+2023-03-25 20:55:48,075: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:48,075: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:48,075: [Latent Search] Best program: DEF run m( move turnLeft IF c( noMarkersPresent c) i( move i) turnRight move m)
+2023-03-25 20:55:48,822: [Latent Search] Iteration 21.
+2023-03-25 20:55:48,822: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:48,822: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:48,822: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:55:49,594: [Latent Search] Iteration 22.
+2023-03-25 20:55:49,594: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:49,594: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:49,594: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move m)
+2023-03-25 20:55:50,313: [Latent Search] Iteration 23.
+2023-03-25 20:55:50,313: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:50,313: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:50,314: [Latent Search] Best program: DEF run m( move turnLeft move putMarker turnRight move turnRight m)
+2023-03-25 20:55:51,056: [Latent Search] Iteration 24.
+2023-03-25 20:55:51,056: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:51,056: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:51,056: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move m)
+2023-03-25 20:55:51,831: [Latent Search] Iteration 25.
+2023-03-25 20:55:51,831: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:51,831: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:51,831: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move m)
+2023-03-25 20:55:52,541: [Latent Search] Iteration 26.
+2023-03-25 20:55:52,541: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:52,541: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:52,541: [Latent Search] Best program: DEF run m( move turnLeft move pickMarker turnRight move m)
+2023-03-25 20:55:53,290: [Latent Search] Iteration 27.
+2023-03-25 20:55:53,290: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:53,290: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:53,290: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move move m)
+2023-03-25 20:55:54,074: [Latent Search] Iteration 28.
+2023-03-25 20:55:54,074: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:54,074: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:54,074: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move m)
+2023-03-25 20:55:54,853: [Latent Search] Iteration 29.
+2023-03-25 20:55:54,853: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:54,853: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:54,853: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move m)
+2023-03-25 20:55:55,598: [Latent Search] Iteration 30.
+2023-03-25 20:55:55,598: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:55,598: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:55,598: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move m)
+2023-03-25 20:55:56,359: [Latent Search] Iteration 31.
+2023-03-25 20:55:56,359: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:56,359: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:56,359: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move m)
+2023-03-25 20:55:57,072: [Latent Search] Iteration 32.
+2023-03-25 20:55:57,072: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:57,072: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:57,072: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move m)
+2023-03-25 20:55:57,781: [Latent Search] Iteration 33.
+2023-03-25 20:55:57,781: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:57,781: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:57,781: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move m)
+2023-03-25 20:55:58,523: [Latent Search] Iteration 34.
+2023-03-25 20:55:58,523: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:58,523: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:58,523: [Latent Search] Best program: DEF run m( move turnLeft move turnRight WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:55:59,326: [Latent Search] Iteration 35.
+2023-03-25 20:55:59,326: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:55:59,326: [Latent Search] Best reward: 0.625
+2023-03-25 20:55:59,326: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move turnLeft m)
+2023-03-25 20:56:00,096: [Latent Search] Iteration 36.
+2023-03-25 20:56:00,096: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:00,096: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:00,096: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move pickMarker m)
+2023-03-25 20:56:00,917: [Latent Search] Iteration 37.
+2023-03-25 20:56:00,917: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:00,917: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:00,917: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:56:01,667: [Latent Search] Iteration 38.
+2023-03-25 20:56:01,667: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:01,667: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:01,667: [Latent Search] Best program: DEF run m( turnLeft move turnRight move WHILE c( noMarkersPresent c) w( move w) m)
+2023-03-25 20:56:02,421: [Latent Search] Iteration 39.
+2023-03-25 20:56:02,421: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:02,421: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:02,421: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move pickMarker m)
+2023-03-25 20:56:03,213: [Latent Search] Iteration 40.
+2023-03-25 20:56:03,213: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:03,213: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:03,213: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:56:04,175: [Latent Search] Iteration 41.
+2023-03-25 20:56:04,176: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:04,176: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:04,176: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move move m)
+2023-03-25 20:56:04,891: [Latent Search] Iteration 42.
+2023-03-25 20:56:04,891: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:04,891: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:04,891: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move m)
+2023-03-25 20:56:05,719: [Latent Search] Iteration 43.
+2023-03-25 20:56:05,719: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:05,719: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:05,719: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move m)
+2023-03-25 20:56:06,544: [Latent Search] Iteration 44.
+2023-03-25 20:56:06,544: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:06,544: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:06,544: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move m)
+2023-03-25 20:56:07,281: [Latent Search] Iteration 45.
+2023-03-25 20:56:07,281: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:07,281: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:07,281: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:56:08,078: [Latent Search] Iteration 46.
+2023-03-25 20:56:08,079: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:08,079: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:08,079: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move turnLeft m)
+2023-03-25 20:56:08,956: [Latent Search] Iteration 47.
+2023-03-25 20:56:08,956: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:08,956: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:08,956: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move turnLeft m)
+2023-03-25 20:56:09,711: [Latent Search] Iteration 48.
+2023-03-25 20:56:09,711: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:09,711: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:09,711: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move move m)
+2023-03-25 20:56:10,474: [Latent Search] Iteration 49.
+2023-03-25 20:56:10,474: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:10,474: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:10,474: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move move m)
+2023-03-25 20:56:11,207: [Latent Search] Iteration 50.
+2023-03-25 20:56:11,208: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:11,208: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:11,208: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move pickMarker m)
+2023-03-25 20:56:11,921: [Latent Search] Iteration 51.
+2023-03-25 20:56:11,922: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:11,922: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:11,922: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move move m)
+2023-03-25 20:56:12,703: [Latent Search] Iteration 52.
+2023-03-25 20:56:12,703: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:12,703: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:12,703: [Latent Search] Best program: DEF run m( turnLeft pickMarker move turnRight move turnLeft WHILE c( frontIsClear c) w( pickMarker w) m)
+2023-03-25 20:56:13,520: [Latent Search] Iteration 53.
+2023-03-25 20:56:13,520: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:13,520: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:13,520: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move turnRight m)
+2023-03-25 20:56:14,253: [Latent Search] Iteration 54.
+2023-03-25 20:56:14,253: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:14,253: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:14,253: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move move m)
+2023-03-25 20:56:15,019: [Latent Search] Iteration 55.
+2023-03-25 20:56:15,019: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:15,019: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:15,019: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move m)
+2023-03-25 20:56:15,820: [Latent Search] Iteration 56.
+2023-03-25 20:56:15,820: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:15,820: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:15,820: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move pickMarker m)
+2023-03-25 20:56:16,576: [Latent Search] Iteration 57.
+2023-03-25 20:56:16,576: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:16,576: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:16,576: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move pickMarker m)
+2023-03-25 20:56:17,474: [Latent Search] Iteration 58.
+2023-03-25 20:56:17,474: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:17,474: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:17,474: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move turnLeft m)
+2023-03-25 20:56:18,216: [Latent Search] Iteration 59.
+2023-03-25 20:56:18,216: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:18,216: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:18,216: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move pickMarker turnLeft m)
+2023-03-25 20:56:18,958: [Latent Search] Iteration 60.
+2023-03-25 20:56:18,958: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:18,958: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:18,958: [Latent Search] Best program: DEF run m( turnLeft pickMarker move turnRight move turnRight WHILE c( frontIsClear c) w( pickMarker move w) m)
+2023-03-25 20:56:19,719: [Latent Search] Iteration 61.
+2023-03-25 20:56:19,719: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:19,719: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:19,719: [Latent Search] Best program: DEF run m( turnLeft pickMarker move turnRight move WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:56:20,494: [Latent Search] Iteration 62.
+2023-03-25 20:56:20,494: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:20,494: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:20,494: [Latent Search] Best program: DEF run m( turnLeft pickMarker move turnRight move turnLeft WHILE c( frontIsClear c) w( pickMarker w) m)
+2023-03-25 20:56:21,275: [Latent Search] Iteration 63.
+2023-03-25 20:56:21,275: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:21,275: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:21,275: [Latent Search] Best program: DEF run m( turnLeft move turnRight move pickMarker move turnLeft m)
+2023-03-25 20:56:22,049: [Latent Search] Iteration 64.
+2023-03-25 20:56:22,049: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:22,050: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:22,050: [Latent Search] Best program: DEF run m( turnLeft pickMarker move turnRight move pickMarker m)
+2023-03-25 20:56:22,921: [Latent Search] Iteration 65.
+2023-03-25 20:56:22,921: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:22,921: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:22,921: [Latent Search] Best program: DEF run m( turnLeft move turnRight pickMarker move WHILE c( frontIsClear c) w( move w) m)
+2023-03-25 20:56:23,745: [Latent Search] Iteration 66.
+2023-03-25 20:56:23,745: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:23,745: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:23,745: [Latent Search] Best program: DEF run m( turnLeft pickMarker move turnRight move move turnLeft m)
+2023-03-25 20:56:24,511: [Latent Search] Iteration 67.
+2023-03-25 20:56:24,511: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:24,511: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:24,511: [Latent Search] Best program: DEF run m( move turnLeft move turnRight move turnLeft m)
+2023-03-25 20:56:25,231: [Latent Search] Iteration 68.
+2023-03-25 20:56:25,231: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:25,232: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:25,232: [Latent Search] Best program: DEF run m( turnLeft move turnRight move m)
+2023-03-25 20:56:25,956: [Latent Search] Iteration 69.
+2023-03-25 20:56:25,956: [Latent Search] Mean elite reward: 0.625
+2023-03-25 20:56:25,956: [Latent Search] Best reward: 0.625
+2023-03-25 20:56:25,957: [Latent Search] Best program: DEF run m( turnLeft move turnRight move move turnRight m)
+2023-03-25 20:56:26,723: [Latent Search] Iteration 70.
+2023-03-25 20:56:26,723: [Latent Search] Mean elite reward: 0.6324999928474426
+2023-03-25 20:56:26,723: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:26,723: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight WHILE c( frontIsClear c) w( move pickMarker w) m)
+2023-03-25 20:56:27,472: [Latent Search] Iteration 71.
+2023-03-25 20:56:27,472: [Latent Search] Mean elite reward: 0.6549999713897705
+2023-03-25 20:56:27,472: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:27,472: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight WHILE c( frontIsClear c) w( move pickMarker w) m)
+2023-03-25 20:56:28,265: [Latent Search] Iteration 72.
+2023-03-25 20:56:28,265: [Latent Search] Mean elite reward: 0.737500011920929
+2023-03-25 20:56:28,265: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:28,265: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight pickMarker move WHILE c( frontIsClear c) w( move turnLeft w) m)
+2023-03-25 20:56:29,033: [Latent Search] Iteration 73.
+2023-03-25 20:56:29,034: [Latent Search] Mean elite reward: 0.8125
+2023-03-25 20:56:29,034: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:29,034: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight WHILE c( frontIsClear c) w( pickMarker move w) m)
+2023-03-25 20:56:29,924: [Latent Search] Iteration 74.
+2023-03-25 20:56:29,925: [Latent Search] Mean elite reward: 0.8125
+2023-03-25 20:56:29,925: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:29,925: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move pickMarker m)
+2023-03-25 20:56:30,672: [Latent Search] Iteration 75.
+2023-03-25 20:56:30,672: [Latent Search] Mean elite reward: 0.8125
+2023-03-25 20:56:30,672: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:30,672: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight WHILE c( frontIsClear c) w( move w) turnLeft move m)
+2023-03-25 20:56:31,419: [Latent Search] Iteration 76.
+2023-03-25 20:56:31,419: [Latent Search] Mean elite reward: 0.8125
+2023-03-25 20:56:31,419: [Latent Search] Best reward: 0.8125
+2023-03-25 20:56:31,419: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move m)
+2023-03-25 20:56:32,139: [Latent Search] Iteration 77.
+2023-03-25 20:56:32,139: [Latent Search] Mean elite reward: 0.8149999976158142
+2023-03-25 20:56:32,139: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:32,139: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight w) turnLeft move move m)
+2023-03-25 20:56:32,898: [Latent Search] Iteration 78.
+2023-03-25 20:56:32,898: [Latent Search] Mean elite reward: 0.8149999976158142
+2023-03-25 20:56:32,898: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:32,898: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight w) move turnLeft move m)
+2023-03-25 20:56:33,755: [Latent Search] Iteration 79.
+2023-03-25 20:56:33,755: [Latent Search] Mean elite reward: 0.8149999976158142
+2023-03-25 20:56:33,755: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:33,755: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight w) turnLeft move m)
+2023-03-25 20:56:34,547: [Latent Search] Iteration 80.
+2023-03-25 20:56:34,547: [Latent Search] Mean elite reward: 0.8174999952316284
+2023-03-25 20:56:34,547: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:34,547: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight w) move turnLeft move m)
+2023-03-25 20:56:35,301: [Latent Search] Iteration 81.
+2023-03-25 20:56:35,301: [Latent Search] Mean elite reward: 0.8224999904632568
+2023-03-25 20:56:35,301: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:35,301: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft move turnRight move m)
+2023-03-25 20:56:36,046: [Latent Search] Iteration 82.
+2023-03-25 20:56:36,047: [Latent Search] Mean elite reward: 0.8324999809265137
+2023-03-25 20:56:36,047: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:36,047: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight w) turnLeft move turnRight move m)
+2023-03-25 20:56:36,830: [Latent Search] Iteration 83.
+2023-03-25 20:56:36,830: [Latent Search] Mean elite reward: 0.875
+2023-03-25 20:56:36,830: [Latent Search] Best reward: 0.875
+2023-03-25 20:56:36,830: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight w) turnLeft move turnRight m)
+2023-03-25 20:56:37,588: [Latent Search] Iteration 84.
+2023-03-25 20:56:37,588: [Latent Search] Mean elite reward: 0.9200000166893005
+2023-03-25 20:56:37,588: [Latent Search] Best reward: 1.0
+2023-03-25 20:56:37,588: [Latent Search] Best program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight move turnLeft w) WHILE c( frontIsClear c) w( move turnLeft w) move turnRight move m)
+2023-03-25 20:56:37,608: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,608: STREAM b'iCCP' 41 291
+2023-03-25 20:56:37,608: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:37,608: Compression method 0
+2023-03-25 20:56:37,608: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:37,609: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,609: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:37,609: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,609: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:37,609: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,610: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:37,610: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,610: STREAM b'IDAT' 41 306
+2023-03-25 20:56:37,610: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,610: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:37,611: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,611: STREAM b'IDAT' 41 142
+2023-03-25 20:56:37,695: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,695: STREAM b'iCCP' 41 291
+2023-03-25 20:56:37,695: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:37,695: Compression method 0
+2023-03-25 20:56:37,695: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:37,696: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,696: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:37,696: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,696: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:37,696: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,696: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:37,696: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,696: STREAM b'IDAT' 41 306
+2023-03-25 20:56:37,696: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,697: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:37,697: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,697: STREAM b'IDAT' 41 142
+2023-03-25 20:56:37,758: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,758: STREAM b'iCCP' 41 291
+2023-03-25 20:56:37,758: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:37,758: Compression method 0
+2023-03-25 20:56:37,758: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:37,758: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,759: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:37,759: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,759: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:37,759: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,759: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:37,759: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,759: STREAM b'IDAT' 41 306
+2023-03-25 20:56:37,759: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,759: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:37,760: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,760: STREAM b'IDAT' 41 142
+2023-03-25 20:56:37,888: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,888: STREAM b'iCCP' 41 291
+2023-03-25 20:56:37,888: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:37,888: Compression method 0
+2023-03-25 20:56:37,888: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:37,888: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,888: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:37,888: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,888: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:37,889: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,889: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:37,889: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,889: STREAM b'IDAT' 41 306
+2023-03-25 20:56:37,889: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,889: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:37,890: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,890: STREAM b'IDAT' 41 142
+2023-03-25 20:56:37,973: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,973: STREAM b'iCCP' 41 291
+2023-03-25 20:56:37,973: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:37,973: Compression method 0
+2023-03-25 20:56:37,973: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:37,974: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,974: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:37,974: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,974: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:37,974: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,974: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:37,974: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,974: STREAM b'IDAT' 41 306
+2023-03-25 20:56:37,974: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,974: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:37,975: STREAM b'IHDR' 16 13
+2023-03-25 20:56:37,975: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,049: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,049: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,049: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,049: Compression method 0
+2023-03-25 20:56:38,049: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,049: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,049: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,050: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,050: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,050: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,050: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,050: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,050: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,050: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,050: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,051: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,051: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,119: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,120: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,120: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,120: Compression method 0
+2023-03-25 20:56:38,120: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,120: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,120: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,120: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,120: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,120: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,121: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,121: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,121: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,121: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,121: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,121: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,121: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,198: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,198: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,198: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,198: Compression method 0
+2023-03-25 20:56:38,198: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,198: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,198: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,199: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,199: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,199: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,199: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,199: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,199: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,199: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,199: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,200: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,200: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,275: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,275: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,275: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,275: Compression method 0
+2023-03-25 20:56:38,275: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,276: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,276: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,276: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,276: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,276: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,276: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,276: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,276: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,277: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,277: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,277: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,277: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,337: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,337: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,337: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,337: Compression method 0
+2023-03-25 20:56:38,337: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,338: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,338: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,338: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,338: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,338: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,338: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,338: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,338: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,339: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,339: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,339: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,339: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,411: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,412: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,412: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,412: Compression method 0
+2023-03-25 20:56:38,412: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,412: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,412: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,412: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,412: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,412: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,413: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,413: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,413: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,413: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,413: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,413: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,413: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,506: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,506: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,506: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,506: Compression method 0
+2023-03-25 20:56:38,506: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,506: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,506: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,506: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,506: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,507: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,507: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,507: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,507: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,507: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,507: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,507: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,507: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,599: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,599: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,599: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,599: Compression method 0
+2023-03-25 20:56:38,599: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,600: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,600: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,600: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,600: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,600: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,600: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,600: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,600: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,600: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,601: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,601: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,601: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,682: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,682: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,682: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,682: Compression method 0
+2023-03-25 20:56:38,682: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,683: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,683: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,683: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,683: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,683: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,683: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,683: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,683: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,684: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,684: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,684: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,684: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,761: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,761: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,761: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,761: Compression method 0
+2023-03-25 20:56:38,761: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,761: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,761: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,761: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,762: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,762: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,762: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,762: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,780: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,780: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,781: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,781: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,781: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,840: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,840: STREAM b'iCCP' 41 291
+2023-03-25 20:56:38,840: iCCP profile name b'ICC Profile'
+2023-03-25 20:56:38,840: Compression method 0
+2023-03-25 20:56:38,840: STREAM b'IDAT' 344 1278
+2023-03-25 20:56:38,841: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,841: STREAM b'IDAT' 41 1307
+2023-03-25 20:56:38,841: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,841: STREAM b'IDAT' 41 1268
+2023-03-25 20:56:38,841: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,841: STREAM b'IDAT' 41 1258
+2023-03-25 20:56:38,841: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,841: STREAM b'IDAT' 41 306
+2023-03-25 20:56:38,841: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,842: STREAM b'IDAT' 41 1153
+2023-03-25 20:56:38,842: STREAM b'IHDR' 16 13
+2023-03-25 20:56:38,842: STREAM b'IDAT' 41 142
+2023-03-25 20:56:38,958: [Main] Converged: True
+2023-03-25 20:56:38,958: [Main] Final program: DEF run m( turnLeft move turnRight move turnLeft move turnRight move turnLeft WHILE c( frontIsClear c) w( move turnRight move turnLeft w) WHILE c( frontIsClear c) w( move turnLeft w) move turnRight move m)
+2023-03-25 20:56:38,958: [Main] Reward of Final Program: 1.0

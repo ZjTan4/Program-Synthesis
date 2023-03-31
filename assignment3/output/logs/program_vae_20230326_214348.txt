@@ -1,0 +1,7 @@
+2023-03-26 21:43:48,863: [Main] Starting Latent Search with model LeapsVAE for task StairClimber
+2023-03-26 21:43:49,193: [Latent Search] Iteration 1.
+2023-03-26 21:43:49,193: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:43:49,193: [Latent Search] Best reward: 0.0
+2023-03-26 21:43:49,193: [Latent Search] Best program: DEF run m( REPEAT R=0 r( move putMarker r) m)
+2023-03-26 21:43:49,194: [Main] Final program: None
+2023-03-26 21:43:49,194: [Main] Reward of Final Program: None

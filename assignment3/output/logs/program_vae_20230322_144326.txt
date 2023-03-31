@@ -1,0 +1,74 @@
+2023-03-22 14:43:26,571: [Main] Starting Latent Search with model LeapsVAE for task StairClimber
+2023-03-22 14:43:26,685: [Latent Search] Iteration 1.
+2023-03-22 14:43:26,686: [Latent Search] Mean elite reward: 0.0
+2023-03-22 14:43:26,686: [Latent Search] Best reward: 0.0
+2023-03-22 14:43:26,686: [Latent Search] Best program: DEF run m( WHILE c( frontIsClear c) w( move w) move WHILE c( not c( frontIsClear c) c) w( move w) m)
+2023-03-22 14:43:26,798: [Latent Search] Iteration 2.
+2023-03-22 14:43:26,798: [Latent Search] Mean elite reward: 1.0
+2023-03-22 14:43:26,798: [Latent Search] Best reward: 1.0
+2023-03-22 14:43:26,798: [Latent Search] Best program: DEF run m( WHILE c( noMarkersPresent c) w( move turnRight w) move WHILE c( frontIsClear c) w( move w) m)
+2023-03-22 14:43:26,830: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,830: STREAM b'iCCP' 41 291
+2023-03-22 14:43:26,830: iCCP profile name b'ICC Profile'
+2023-03-22 14:43:26,830: Compression method 0
+2023-03-22 14:43:26,830: STREAM b'IDAT' 344 1278
+2023-03-22 14:43:26,833: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,833: STREAM b'IDAT' 41 1307
+2023-03-22 14:43:26,833: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,833: STREAM b'IDAT' 41 1268
+2023-03-22 14:43:26,834: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,834: STREAM b'IDAT' 41 1258
+2023-03-22 14:43:26,834: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,834: STREAM b'IDAT' 41 306
+2023-03-22 14:43:26,834: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,834: STREAM b'IDAT' 41 1153
+2023-03-22 14:43:26,834: STREAM b'IHDR' 16 13
+2023-03-22 14:43:26,834: STREAM b'IDAT' 41 142
+2023-03-22 14:43:26,851: Importing BlpImagePlugin
+2023-03-22 14:43:26,853: Importing BmpImagePlugin
+2023-03-22 14:43:26,853: Importing BufrStubImagePlugin
+2023-03-22 14:43:26,853: Importing CurImagePlugin
+2023-03-22 14:43:26,853: Importing DcxImagePlugin
+2023-03-22 14:43:26,854: Importing DdsImagePlugin
+2023-03-22 14:43:26,854: Importing EpsImagePlugin
+2023-03-22 14:43:26,855: Importing FitsImagePlugin
+2023-03-22 14:43:26,855: Importing FitsStubImagePlugin
+2023-03-22 14:43:26,855: Importing FliImagePlugin
+2023-03-22 14:43:26,856: Importing FpxImagePlugin
+2023-03-22 14:43:26,856: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2023-03-22 14:43:26,856: Importing FtexImagePlugin
+2023-03-22 14:43:26,856: Importing GbrImagePlugin
+2023-03-22 14:43:26,857: Importing GifImagePlugin
+2023-03-22 14:43:26,857: Importing GribStubImagePlugin
+2023-03-22 14:43:26,857: Importing Hdf5StubImagePlugin
+2023-03-22 14:43:26,857: Importing IcnsImagePlugin
+2023-03-22 14:43:26,859: Importing IcoImagePlugin
+2023-03-22 14:43:26,859: Importing ImImagePlugin
+2023-03-22 14:43:26,860: Importing ImtImagePlugin
+2023-03-22 14:43:26,860: Importing IptcImagePlugin
+2023-03-22 14:43:26,861: Importing JpegImagePlugin
+2023-03-22 14:43:26,861: Importing Jpeg2KImagePlugin
+2023-03-22 14:43:26,861: Importing McIdasImagePlugin
+2023-03-22 14:43:26,861: Importing MicImagePlugin
+2023-03-22 14:43:26,861: Image: failed to import MicImagePlugin: No module named 'olefile'
+2023-03-22 14:43:26,861: Importing MpegImagePlugin
+2023-03-22 14:43:26,861: Importing MpoImagePlugin
+2023-03-22 14:43:26,862: Importing MspImagePlugin
+2023-03-22 14:43:26,862: Importing PalmImagePlugin
+2023-03-22 14:43:26,863: Importing PcdImagePlugin
+2023-03-22 14:43:26,863: Importing PcxImagePlugin
+2023-03-22 14:43:26,863: Importing PdfImagePlugin
+2023-03-22 14:43:26,869: Importing PixarImagePlugin
+2023-03-22 14:43:26,869: Importing PngImagePlugin
+2023-03-22 14:43:26,869: Importing PpmImagePlugin
+2023-03-22 14:43:26,869: Importing PsdImagePlugin
+2023-03-22 14:43:26,869: Importing SgiImagePlugin
+2023-03-22 14:43:26,869: Importing SpiderImagePlugin
+2023-03-22 14:43:26,870: Importing SunImagePlugin
+2023-03-22 14:43:26,870: Importing TgaImagePlugin
+2023-03-22 14:43:26,870: Importing TiffImagePlugin
+2023-03-22 14:43:26,870: Importing WebPImagePlugin
+2023-03-22 14:43:27,325: Importing WmfImagePlugin
+2023-03-22 14:43:27,326: Importing XbmImagePlugin
+2023-03-22 14:43:27,327: Importing XpmImagePlugin
+2023-03-22 14:43:27,327: Importing XVThumbImagePlugin

@@ -1,0 +1,81 @@
+2023-03-25 20:29:58,208: [Main] Starting Latent Search with model LeapsVAE for task StairClimber
+2023-03-25 20:30:00,210: [Latent Search] Iteration 1.
+2023-03-25 20:30:00,210: [Latent Search] Mean elite reward: 0.026348039507865906
+2023-03-25 20:30:00,210: [Latent Search] Best reward: 0.625
+2023-03-25 20:30:00,210: [Latent Search] Best program: DEF run m( IF c( frontIsClear c) i( turnRight pickMarker i) turnLeft move turnRight putMarker move pickMarker m)
+2023-03-25 20:30:01,997: [Latent Search] Iteration 2.
+2023-03-25 20:30:01,997: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:01,998: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:01,998: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:03,868: [Latent Search] Iteration 3.
+2023-03-25 20:30:03,868: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:03,868: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:03,868: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( move turnLeft w) m)
+2023-03-25 20:30:05,793: [Latent Search] Iteration 4.
+2023-03-25 20:30:05,793: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:05,794: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:05,794: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( move w) m)
+2023-03-25 20:30:07,627: [Latent Search] Iteration 5.
+2023-03-25 20:30:07,627: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:07,627: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:07,627: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move putMarker r) WHILE c( leftIsClear c) w( turnLeft move w) m)
+2023-03-25 20:30:09,414: [Latent Search] Iteration 6.
+2023-03-25 20:30:09,414: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:09,414: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:09,414: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move putMarker r) WHILE c( leftIsClear c) w( turnLeft move w) m)
+2023-03-25 20:30:11,349: [Latent Search] Iteration 7.
+2023-03-25 20:30:11,350: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:11,350: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:11,350: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:13,289: [Latent Search] Iteration 8.
+2023-03-25 20:30:13,290: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:13,290: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:13,290: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft w) m)
+2023-03-25 20:30:15,151: [Latent Search] Iteration 9.
+2023-03-25 20:30:15,151: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:15,151: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:15,151: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft w) m)
+2023-03-25 20:30:17,072: [Latent Search] Iteration 10.
+2023-03-25 20:30:17,073: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:17,073: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:17,073: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:18,895: [Latent Search] Iteration 11.
+2023-03-25 20:30:18,895: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:18,896: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:18,896: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move putMarker r) WHILE c( leftIsClear c) w( move w) m)
+2023-03-25 20:30:20,642: [Latent Search] Iteration 12.
+2023-03-25 20:30:20,643: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:20,643: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:20,643: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:22,469: [Latent Search] Iteration 13.
+2023-03-25 20:30:22,470: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:22,470: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:22,470: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move pickMarker i) ELSE e( move e) WHILE c( rightIsClear c) w( move turnRight w) m)
+2023-03-25 20:30:24,319: [Latent Search] Iteration 14.
+2023-03-25 20:30:24,319: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:24,319: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:24,319: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( leftIsClear c) w( turnLeft move w) m)
+2023-03-25 20:30:26,219: [Latent Search] Iteration 15.
+2023-03-25 20:30:26,219: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:26,219: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:26,219: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:28,166: [Latent Search] Iteration 16.
+2023-03-25 20:30:28,167: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:28,167: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:28,167: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move putMarker r) WHILE c( leftIsClear c) w( turnLeft move w) m)
+2023-03-25 20:30:29,977: [Latent Search] Iteration 17.
+2023-03-25 20:30:29,977: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:29,977: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:29,977: [Latent Search] Best program: DEF run m( REPEAT R=1 r( putMarker move r) WHILE c( leftIsClear c) w( turnLeft move w) m)
+2023-03-25 20:30:31,863: [Latent Search] Iteration 18.
+2023-03-25 20:30:31,863: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:31,863: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:31,863: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:33,755: [Latent Search] Iteration 19.
+2023-03-25 20:30:33,755: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:33,755: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:33,755: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)
+2023-03-25 20:30:35,590: [Latent Search] Iteration 20.
+2023-03-25 20:30:35,591: [Latent Search] Mean elite reward: 0.0
+2023-03-25 20:30:35,591: [Latent Search] Best reward: 0.0
+2023-03-25 20:30:35,591: [Latent Search] Best program: DEF run m( REPEAT R=1 r( move turnRight r) WHILE c( noMarkersPresent c) w( turnLeft move w) m)

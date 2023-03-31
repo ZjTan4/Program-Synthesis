@@ -1,0 +1,29 @@
+2023-03-26 21:34:09,651: [Main] Starting Latent Search with model LeapsVAE for task StairClimber
+2023-03-26 21:34:11,863: [Latent Search] Iteration 1.
+2023-03-26 21:34:11,863: [Latent Search] Mean elite reward: 0.026348039507865906
+2023-03-26 21:34:11,863: [Latent Search] Best reward: 0.625
+2023-03-26 21:34:11,863: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move turnRight i) ELSE e( turnLeft move e) turnRight move turnRight m)
+2023-03-26 21:34:13,713: [Latent Search] Iteration 2.
+2023-03-26 21:34:13,713: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:34:13,713: [Latent Search] Best reward: 0.0
+2023-03-26 21:34:13,713: [Latent Search] Best program: DEF run m( REPEAT R=1 r( putMarker r) WHILE c( leftIsClear c) w( move w) turnLeft m)
+2023-03-26 21:34:15,701: [Latent Search] Iteration 3.
+2023-03-26 21:34:15,701: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:34:15,701: [Latent Search] Best reward: 0.0
+2023-03-26 21:34:15,701: [Latent Search] Best program: DEF run m( REPEAT R=1 r( putMarker move r) WHILE c( leftIsClear c) w( putMarker w) m)
+2023-03-26 21:34:17,456: [Latent Search] Iteration 4.
+2023-03-26 21:34:17,456: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:34:17,456: [Latent Search] Best reward: 0.0
+2023-03-26 21:34:17,456: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move turnLeft i) ELSE e( putMarker e) move turnRight m)
+2023-03-26 21:34:19,339: [Latent Search] Iteration 5.
+2023-03-26 21:34:19,340: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:34:19,340: [Latent Search] Best reward: 0.0
+2023-03-26 21:34:19,340: [Latent Search] Best program: DEF run m( REPEAT R=1 r( putMarker r) move WHILE c( leftIsClear c) w( turnLeft w) m)
+2023-03-26 21:34:21,360: [Latent Search] Iteration 6.
+2023-03-26 21:34:21,361: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:34:21,361: [Latent Search] Best reward: 0.0
+2023-03-26 21:34:21,361: [Latent Search] Best program: DEF run m( REPEAT R=1 r( IFELSE c( leftIsClear c) i( putMarker i) ELSE e( move e) WHILE c( frontIsClear c) w( putMarker w) r) m)
+2023-03-26 21:34:23,343: [Latent Search] Iteration 7.
+2023-03-26 21:34:23,343: [Latent Search] Mean elite reward: 0.0
+2023-03-26 21:34:23,344: [Latent Search] Best reward: 0.0
+2023-03-26 21:34:23,344: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move turnRight i) ELSE e( turnLeft move e) WHILE c( frontIsClear c) w( putMarker w) m)
