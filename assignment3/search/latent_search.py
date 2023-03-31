@@ -80,6 +80,7 @@ class LatentSearch:
     
     def search(self) -> tuple[str, float]:
         population = self.init_population()
+        best_reward = None
         for _ in range(self.number_iterations):
             programs, rewards = self.execute_population(population)
             topk = torch.topk(rewards, self.n_elite)
@@ -87,14 +88,17 @@ class LatentSearch:
                 population[topk.indices[i]] for i in range(self.n_elite)
             ])
             mean_elite = elite.mean(dim=0)
+            # Best program
+            if best_reward is None or best_reward < torch.max(rewards):
+                best_program = programs[torch.argmax(rewards)]
+                best_reward = torch.max(rewards)
+            # Prepare next iteration
             population = []
             for _ in range(self.population_size):
                 individual = mean_elite + self.sigma * torch.randn(self.model_hidden_size, device=self.device)
                 population.append(individual)
-            population = torch.Tensor(population, device=self.device)
-        return 
-
-
+            population = torch.stack(population)
+        return best_program, best_reward
 
     def save_gifs(self, program):
         """

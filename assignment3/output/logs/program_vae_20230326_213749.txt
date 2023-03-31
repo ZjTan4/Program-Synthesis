@@ -1,9 +1,0 @@
-2023-03-26 21:37:49,381: [Main] Starting Latent Search with model LeapsVAE for task StairClimber
-2023-03-26 21:37:51,549: [Latent Search] Iteration 1.
-2023-03-26 21:37:51,550: [Latent Search] Mean elite reward: 0.026348039507865906
-2023-03-26 21:37:51,550: [Latent Search] Best reward: 0.625
-2023-03-26 21:37:51,550: [Latent Search] Best program: DEF run m( IFELSE c( frontIsClear c) i( move turnRight i) ELSE e( turnLeft move e) turnRight move turnRight m)
-2023-03-26 21:37:53,422: [Latent Search] Iteration 2.
-2023-03-26 21:37:53,422: [Latent Search] Mean elite reward: 0.0
-2023-03-26 21:37:53,422: [Latent Search] Best reward: 0.0
-2023-03-26 21:37:53,422: [Latent Search] Best program: DEF run m( REPEAT R=1 r( putMarker r) WHILE c( leftIsClear c) w( move w) turnLeft m)
