@@ -26,7 +26,9 @@ class LatentSearch:
         self.sigma = Config.search_sigma
         self.model_hidden_size = Config.model_hidden_size
         self.task_envs = [task_cls(i) for i in range(self.number_executions)]
+        self.reduce_to_mean = Config.search_reduce_to_mean
         
+
     def init_population(self) -> torch.Tensor:
         """Initializes the CEM population from a normal distribution.
 
@@ -79,6 +81,15 @@ class LatentSearch:
         return programs, torch.tensor(rewards, device=self.device)
     
     def search(self) -> tuple[str, float]:
+        if self.reduce_to_mean:
+            return self.search_reduce_to_mean()
+        else:
+            return self.search_reduce_to_sample()
+    
+    def search_reduce_to_sample(self) -> tuple[str, float]:
+        pass
+
+    def search_reduce_to_mean(self) -> tuple[str, float]:
         population = self.init_population()
         best_reward = None
         for _ in range(self.number_iterations):
