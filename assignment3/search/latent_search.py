@@ -82,53 +82,23 @@ class LatentSearch:
         return programs, torch.tensor(rewards, device=self.device)
     
     def search(self) -> tuple[str, float]:
-        if self.reduce_to_mean:
-            return self.search_reduce_to_mean()
-        else:
-            return self.search_reduce_to_sample()
-    
-    def search_reduce_to_sample(self) -> tuple[str, float]:
-        print("SAMPLE: {}".format(self.seed))
+        print("REDUCE_TO_MEAN: {}; SEED: {}".format(self.reduce_to_mean, self.seed))
         population = self.init_population()
-        best_reward = None
+        best_reward = -float("inf")
+        best_program = ""
         for _ in range(self.number_iterations):
             programs, rewards = self.execute_population(population)
             topk = torch.topk(rewards, self.n_elite)
-            elite = torch.stack([
-                population[topk.indices[i]] for i in range(self.n_elite)
-            ])
-            sample_elite = elite[torch.randint(self.n_elite, (1,)).squeeze()]
+            elite = population[topk.indices]
+            sample_elite = elite[torch.randint(self.n_elite, (1,)).squeeze()] if self.reduce_to_mean else elite.mean(dim=0)
             # Best program
-            if best_reward is None or best_reward < torch.max(rewards):
+            if best_reward < torch.max(rewards):
                 best_program = programs[torch.argmax(rewards)]
                 best_reward = torch.max(rewards)
             # Prepare next iteration
             population = []
             for _ in range(self.population_size):
                 individual = sample_elite + self.sigma * torch.randn(self.model_hidden_size, device=self.device)
-                population.append(individual)
-            population = torch.stack(population)
-        return best_program, best_reward
-
-    def search_reduce_to_mean(self) -> tuple[str, float]:
-        print("MEAN: {}".format(self.seed))
-        population = self.init_population()
-        best_reward = None
-        for _ in range(self.number_iterations):
-            programs, rewards = self.execute_population(population)
-            topk = torch.topk(rewards, self.n_elite)
-            elite = torch.stack([
-                population[topk.indices[i]] for i in range(self.n_elite)
-            ])
-            mean_elite = elite.mean(dim=0)
-            # Best program
-            if best_reward is None or best_reward < torch.max(rewards):
-                best_program = programs[torch.argmax(rewards)]
-                best_reward = torch.max(rewards)
-            # Prepare next iteration
-            population = []
-            for _ in range(self.population_size):
-                individual = mean_elite + self.sigma * torch.randn(self.model_hidden_size, device=self.device)
                 population.append(individual)
             population = torch.stack(population)
         return best_program, best_reward
