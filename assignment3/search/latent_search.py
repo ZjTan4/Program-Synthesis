@@ -90,11 +90,11 @@ class LatentSearch:
             programs, rewards = self.execute_population(population)
             topk = torch.topk(rewards, self.n_elite)
             elite = population[topk.indices]
-            sample_elite = elite[torch.randint(self.n_elite, (1,)).squeeze()] if self.reduce_to_mean else elite.mean(dim=0)
+            sample_elite = elite.mean(dim=0) if self.reduce_to_mean else elite[torch.randint(self.n_elite, (1,)).squeeze()]
             # Best program
-            if best_reward < torch.max(rewards):
-                best_program = programs[torch.argmax(rewards)]
-                best_reward = torch.max(rewards)
+            # if best_reward < torch.max(rewards):
+            best_program = programs[torch.argmax(rewards)]
+            best_reward = torch.max(rewards)
             # Prepare next iteration
             population = []
             for _ in range(self.population_size):
