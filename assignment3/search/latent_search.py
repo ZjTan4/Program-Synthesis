@@ -27,6 +27,7 @@ class LatentSearch:
         self.model_hidden_size = Config.model_hidden_size
         self.task_envs = [task_cls(i) for i in range(self.number_executions)]
         self.reduce_to_mean = Config.search_reduce_to_mean
+        self.seed = Config.env_seed
         
 
     def init_population(self) -> torch.Tensor:
@@ -87,6 +88,7 @@ class LatentSearch:
             return self.search_reduce_to_sample()
     
     def search_reduce_to_sample(self) -> tuple[str, float]:
+        print("SAMPLE: {}".format(self.seed))
         population = self.init_population()
         best_reward = None
         for _ in range(self.number_iterations):
@@ -109,6 +111,7 @@ class LatentSearch:
         return best_program, best_reward
 
     def search_reduce_to_mean(self) -> tuple[str, float]:
+        print("MEAN: {}".format(self.seed))
         population = self.init_population()
         best_reward = None
         for _ in range(self.number_iterations):
@@ -138,8 +141,10 @@ class LatentSearch:
         exec_program = self.dsl.parse_str_to_node(program)
         env_number = 1
         for task_env in self.task_envs:
+            path = f'output/gifs/mean/{self.seed}/' if self.reduce_to_mean else f'output/gifs/sample/{self.seed}/'
+
             task_env.reset_state()
             state = task_env.get_state()
             env = Environment(state, exec_program)
-            env.run_and_trace('trace_' + str(env_number) + '.gif')
+            env.run_and_trace(path + 'trace_' + str(env_number) + '.gif')
             env_number += 1
