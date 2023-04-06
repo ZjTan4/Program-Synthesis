@@ -26,9 +26,10 @@ if __name__ == '__main__':
     searcher = LatentSearch(model, task_cls, dsl)
     
     StdoutLogger.log('Main', f'Starting Latent Search with model {Config.model_name} for task {Config.env_task}')
-    
+    StdoutLogger.log('Main', f'Reduce to Mean: {Config.search_reduce_to_mean}; Seed: {Config.env_seed}')
     best_program, best_reward = searcher.search()
     # searcher.save_gifs(best_program)
     
     StdoutLogger.log('Main', f'Final program: {best_program}') 
-    StdoutLogger.log('Main', f'Reward of Final Program: {best_reward}') 
+    StdoutLogger.log('Main', f'Reward of Final Program: {best_reward}')
+    print("-"*100)

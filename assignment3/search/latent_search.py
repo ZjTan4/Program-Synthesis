@@ -82,7 +82,6 @@ class LatentSearch:
         return programs, torch.tensor(rewards, device=self.device)
     
     def search(self) -> tuple[str, float]:
-        print("REDUCE_TO_MEAN: {}; SEED: {}".format(self.reduce_to_mean, self.seed))
         population = self.init_population()
         best_reward = -float("inf")
         best_program = ""
